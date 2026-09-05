@@ -139,11 +139,6 @@ a:hover {
   margin: 0 0 16px;
 }
 
-.hero .intro strong {
-  color: var(--accent);
-  font-weight: 600;
-}
-
 /* Contact row */
 
 .contact-row {
@@ -280,6 +275,7 @@ section.block:last-of-type {
   height: 100%;
   object-fit: cover;
   display: block;
+  cursor: zoom-in;
 }
 
 .project-thumb.pad img {
@@ -427,6 +423,47 @@ section.block:last-of-type {
   color: var(--text-dim);
   font-size: 0.95rem;
   max-width: 62ch;
+}
+
+/* Lightbox */
+
+dialog.lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 92vw;
+  max-height: 92vh;
+}
+
+dialog.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+dialog.lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border: 1px solid var(--border-bright);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #f4f2ee;
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
 }
 
 /* Footer */
