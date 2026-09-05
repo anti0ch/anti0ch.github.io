@@ -139,6 +139,11 @@ a:hover {
   margin: 0 0 16px;
 }
 
+.hero .intro strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* Contact row */
 
 .contact-row {
@@ -251,11 +256,13 @@ section.block:last-of-type {
   background: var(--bg-raised);
   border: 1px solid var(--border);
   overflow: hidden;
-  transition: border-color 150ms;
+  transition: border-color 150ms, transform 150ms, box-shadow 150ms;
 }
 
 .project:hover {
   border-color: var(--border-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.45);
 }
 
 .project.wide {
