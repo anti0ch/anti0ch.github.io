@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 392" width="760" height="392" role="img" aria-label="Six eviction policies against a clairvoyant ceiling, at three budgets.">
+<style>
+  .bg { fill: #ffffff; }
+  .frame { stroke: #cbd5e1; fill: none; stroke-width: 1; }
+  .grid { stroke: #e2e8f0; stroke-width: 1; }
+  text { font-family: ui-sans-serif, -apple-system, Segoe UI, Helvetica, sans-serif; }
+  .tick { fill: #64748b; font-size: 12px; }
+  .axis { fill: #475569; font-size: 13px; }
+  .title { fill: #0f172a; font-size: 16px; font-weight: 600; }
+  .sub { fill: #64748b; font-size: 12.5px; }
+  .gap { fill: #f59e0b; fill-opacity: 0.13; }
+  .gaplabel { fill: #b45309; font-size: 12.5px; font-weight: 600; }
+  .err { stroke-width: 1; stroke-opacity: 0.5; }
+  .dot-lfu, .line-lfu, .err-lfu { stroke: #10b981; }
+  .dot-arc, .line-arc, .err-arc { stroke: #6b7280; }
+  .dot-assoc, .line-assoc, .err-assoc { stroke: #7c3aed; }
+  .dot-comp, .line-comp, .err-comp { stroke: #2563eb; }
+  .dot-branch, .line-branch, .err-branch { stroke: #db2777; }
+  .dot-recency, .line-recency, .err-recency { stroke: #0f172a; }
+  .dot-ceiling, .line-ceiling, .err-ceiling { stroke: #b45309; }
+  .fill-lfu { fill: #10b981; }
+  .fill-arc { fill: #6b7280; }
+  .fill-assoc { fill: #7c3aed; }
+  .fill-comp { fill: #2563eb; }
+  .fill-branch { fill: #db2777; }
+  .fill-recency { fill: #0f172a; }
+  .fill-ceiling { fill: #b45309; }
+  .line { fill: none; stroke-width: 2; }
+  .line-ceiling { stroke-width: 2.75; }
+  .dot { fill: #ffffff; stroke-width: 2; }
+  .legend { fill: #334155; font-size: 12.5px; }
+
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .frame { stroke: #30363d; }
+    .grid { stroke: #21262d; }
+    .tick, .sub { fill: #8b949e; }
+    .axis { fill: #b1bac4; }
+    .title { fill: #e6edf3; }
+    .legend { fill: #c9d1d9; }
+    .gap { fill: #f59e0b; fill-opacity: 0.16; }
+    .gaplabel { fill: #f0b429; }
+    .dot { fill: #0d1117; }
+    .dot-lfu, .line-lfu, .err-lfu { stroke: #34d399; }
+    .dot-arc, .line-arc, .err-arc { stroke: #9ca3af; }
+    .dot-assoc, .line-assoc, .err-assoc { stroke: #a78bfa; }
+    .dot-comp, .line-comp, .err-comp { stroke: #60a5fa; }
+    .dot-branch, .line-branch, .err-branch { stroke: #f472b6; }
+    .dot-recency, .line-recency, .err-recency { stroke: #e6edf3; }
+    .dot-ceiling, .line-ceiling, .err-ceiling { stroke: #f0b429; }
+    .fill-lfu { fill: #34d399; }
+    .fill-arc { fill: #9ca3af; }
+    .fill-assoc { fill: #a78bfa; }
+    .fill-comp { fill: #60a5fa; }
+    .fill-branch { fill: #f472b6; }
+    .fill-recency { fill: #e6edf3; }
+    .fill-ceiling { fill: #f0b429; }
+  }
+</style>
+<rect class="bg" width="760" height="392"/>
+<text class="title" x="58" y="26">Branch locality separates; the decay model stays in the pack</text>
+<text class="sub" x="58" y="43">Hit rate on the next session's reopened items, mean of 25 corpora, bars are ±1 sd</text>
+<line class="grid" x1="58" y1="346" x2="734" y2="346"/>
+<text class="tick" x="48" y="350" text-anchor="end">0%</text>
+<line class="grid" x1="58" y1="287.2" x2="734" y2="287.2"/>
+<text class="tick" x="48" y="291.2" text-anchor="end">20%</text>
+<line class="grid" x1="58" y1="228.4" x2="734" y2="228.4"/>
+<text class="tick" x="48" y="232.4" text-anchor="end">40%</text>
+<line class="grid" x1="58" y1="169.6" x2="734" y2="169.6"/>
+<text class="tick" x="48" y="173.6" text-anchor="end">60%</text>
+<line class="grid" x1="58" y1="110.8" x2="734" y2="110.8"/>
+<text class="tick" x="48" y="114.8" text-anchor="end">80%</text>
+<line class="grid" x1="58" y1="52" x2="734" y2="52"/>
+<text class="tick" x="48" y="56" text-anchor="end">100%</text>
+<polygon class="gap" points="170.67,121.69 396,70.76 621.33,52.47 621.33,81.84 396,110.77 170.67,143.64"/>
+<text class="gaplabel" x="396" y="90.77" text-anchor="middle">signal no policy takes</text>
+<text class="gaplabel" x="396" y="106.77" text-anchor="middle" opacity="0.8">7 to 14 points</text>
+<path class="line line-lfu" d="M170.67,215.89 L396,150.36 L621.33,93.96"/>
+<line class="err err-lfu" x1="170.67" y1="243.13" x2="170.67" y2="188.65"/>
+<circle class="dot dot-lfu" cx="170.67" cy="215.89" r="4"/>
+<line class="err err-lfu" x1="396" y1="172.62" x2="396" y2="128.1"/>
+<circle class="dot dot-lfu" cx="396" cy="150.36" r="4"/>
+<line class="err err-lfu" x1="621.33" y1="111.63" x2="621.33" y2="76.29"/>
+<circle class="dot dot-lfu" cx="621.33" cy="93.96" r="4"/>
+<path class="line line-arc" d="M170.67,184.69 L396,140.39 L621.33,91.29"/>
+<line class="err err-arc" x1="170.67" y1="205.94" x2="170.67" y2="163.43"/>
+<circle class="dot dot-arc" cx="170.67" cy="184.69" r="4"/>
+<line class="err err-arc" x1="396" y1="161.44" x2="396" y2="119.34"/>
+<circle class="dot dot-arc" cx="396" cy="140.39" r="4"/>
+<line class="err err-arc" x1="621.33" y1="108.47" x2="621.33" y2="74.11"/>
+<circle class="dot dot-arc" cx="621.33" cy="91.29" r="4"/>
+<path class="line line-assoc" d="M170.67,179.71 L396,131.75 L621.33,91.47"/>
+<line class="err err-assoc" x1="170.67" y1="201.95" x2="170.67" y2="157.46"/>
+<circle class="dot dot-assoc" cx="170.67" cy="179.71" r="4"/>
+<line class="err err-assoc" x1="396" y1="154.33" x2="396" y2="109.17"/>
+<circle class="dot dot-assoc" cx="396" cy="131.75" r="4"/>
+<line class="err err-assoc" x1="621.33" y1="106.56" x2="621.33" y2="76.38"/>
+<circle class="dot dot-assoc" cx="621.33" cy="91.47" r="4"/>
+<path class="line line-comp" d="M170.67,182.51 L396,142.4 L621.33,96.39"/>
+<line class="err err-comp" x1="170.67" y1="204.27" x2="170.67" y2="160.74"/>
+<circle class="dot dot-comp" cx="170.67" cy="182.51" r="4"/>
+<line class="err err-comp" x1="396" y1="164.19" x2="396" y2="120.6"/>
+<circle class="dot dot-comp" cx="396" cy="142.4" r="4"/>
+<line class="err err-comp" x1="621.33" y1="109.66" x2="621.33" y2="83.12"/>
+<circle class="dot dot-comp" cx="621.33" cy="96.39" r="4"/>
+<path class="line line-branch" d="M170.67,143.64 L396,110.77 L621.33,81.84"/>
+<line class="err err-branch" x1="170.67" y1="161.21" x2="170.67" y2="126.07"/>
+<circle class="dot dot-branch" cx="170.67" cy="143.64" r="4"/>
+<line class="err err-branch" x1="396" y1="122.63" x2="396" y2="98.92"/>
+<circle class="dot dot-branch" cx="396" cy="110.77" r="4"/>
+<line class="err err-branch" x1="621.33" y1="90.56" x2="621.33" y2="73.13"/>
+<circle class="dot dot-branch" cx="621.33" cy="81.84" r="4"/>
+<path class="line line-recency" d="M170.67,183.14 L396,133.56 L621.33,89.3"/>
+<line class="err err-recency" x1="170.67" y1="204.69" x2="170.67" y2="161.59"/>
+<circle class="dot dot-recency" cx="170.67" cy="183.14" r="4"/>
+<line class="err err-recency" x1="396" y1="156.54" x2="396" y2="110.59"/>
+<circle class="dot dot-recency" cx="396" cy="133.56" r="4"/>
+<line class="err err-recency" x1="621.33" y1="105.74" x2="621.33" y2="72.87"/>
+<circle class="dot dot-recency" cx="621.33" cy="89.3" r="4"/>
+<path class="line line-ceiling" d="M170.67,121.69 L396,70.76 L621.33,52.47"/>
+<line class="err err-ceiling" x1="170.67" y1="137.75" x2="170.67" y2="105.63"/>
+<circle class="dot dot-ceiling" cx="170.67" cy="121.69" r="4"/>
+<line class="err err-ceiling" x1="396" y1="81" x2="396" y2="60.52"/>
+<circle class="dot dot-ceiling" cx="396" cy="70.76" r="4"/>
+<line class="err err-ceiling" x1="621.33" y1="54.16" x2="621.33" y2="50.78"/>
+<circle class="dot dot-ceiling" cx="621.33" cy="52.47" r="4"/>
+<text class="axis" x="170.67" y="370" text-anchor="middle">budget 8</text>
+<text class="axis" x="396" y="370" text-anchor="middle">budget 16</text>
+<text class="axis" x="621.33" y="370" text-anchor="middle">budget 24</text>
+<rect class="frame" x="58" y="52" width="676" height="294"/>
+<circle class="fill-ceiling" cx="79" cy="282" r="4"/>
+<text class="legend" x="90" y="286">CEILING (Belady)</text>
+<circle class="fill-recency" cx="293.67" cy="282" r="4"/>
+<text class="legend" x="304.67" y="286">recency (LRU)</text>
+<circle class="fill-branch" cx="508.33" cy="282" r="4"/>
+<text class="legend" x="519.33" y="286">branch recency</text>
+<circle class="fill-comp" cx="79" cy="302" r="4"/>
+<text class="legend" x="90" y="306">funes, competition</text>
+<circle class="fill-assoc" cx="293.67" cy="302" r="4"/>
+<text class="legend" x="304.67" y="306">funes, association</text>
+<circle class="fill-arc" cx="508.33" cy="302" r="4"/>
+<text class="legend" x="519.33" y="306">ARC (adaptive)</text>
+<circle class="fill-lfu" cx="79" cy="322" r="4"/>
+<text class="legend" x="90" y="326">frequency (LFU)</text>
+</svg>
