@@ -348,6 +348,10 @@ section.block:last-of-type {
   border-top: 1px solid var(--border);
 }
 
+.stack dd .chips {
+  margin: 0;
+}
+
 .stack dt:first-of-type,
 .stack dt:first-of-type + dd {
   border-top: none;
