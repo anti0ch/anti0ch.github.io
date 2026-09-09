@@ -71,3 +71,49 @@
     } catch (e) {}
   });
 })();
+
+(function () {
+  var sections = Array.prototype.slice.call(
+    document.querySelectorAll('section.block[id]')
+  );
+  var navLinks = document.querySelectorAll('.nav-links a');
+  if (!sections.length || !navLinks.length) return;
+
+  var linkFor = {};
+  navLinks.forEach(function (a) {
+    linkFor[a.getAttribute('href').slice(1)] = a;
+  });
+
+  var navH =
+    parseInt(
+      getComputedStyle(document.documentElement).getPropertyValue('--nav-h'),
+      10
+    ) || 46;
+
+  var ticking = false;
+
+  function setActive() {
+    var fromTop = window.scrollY + navH + 4;
+    var atBottom =
+      window.scrollY + window.innerHeight >=
+      document.documentElement.scrollHeight - 2;
+    var current = null;
+    sections.forEach(function (s) {
+      if (s.offsetTop <= fromTop) current = s;
+    });
+    if (atBottom) current = sections[sections.length - 1];
+    navLinks.forEach(function (a) { a.classList.remove('active'); });
+    if (current && linkFor[current.id]) {
+      linkFor[current.id].classList.add('active');
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(setActive);
+  });
+
+  setActive();
+})();

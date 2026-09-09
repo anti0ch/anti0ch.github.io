@@ -241,6 +241,10 @@ a.ext::after {
   color: var(--accent);
 }
 
+.section-nav a.active {
+  color: var(--accent);
+}
+
 .theme-toggle {
   background: none;
   border: none;
