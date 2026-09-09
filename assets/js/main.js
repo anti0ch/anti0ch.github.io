@@ -38,3 +38,36 @@
     if (lastFocused) lastFocused.focus();
   });
 })();
+
+(function () {
+  var STORAGE_KEY = 'theme';
+  var root = document.documentElement;
+  var toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  function systemTheme() {
+    return window.matchMedia('(prefers-color-scheme: light)').matches
+      ? 'light'
+      : 'dark';
+  }
+
+  function render(theme) {
+    toggle.textContent = '[ ' + (theme || systemTheme()) + ' ]';
+  }
+
+  var stored = null;
+  try {
+    stored = localStorage.getItem(STORAGE_KEY);
+  } catch (e) {}
+  render(stored);
+
+  toggle.addEventListener('click', function () {
+    var current = root.getAttribute('data-theme') || systemTheme();
+    var next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    render(next);
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch (e) {}
+  });
+})();

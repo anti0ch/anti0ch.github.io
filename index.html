@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <title>Cosmo Chou — Senior Software Engineer</title>
     <meta
       name="description"
@@ -66,9 +74,17 @@
       </header>
 
       <nav class="section-nav" aria-label="sections">
-        <a href="#projects">projects</a>
-        <a href="#stack">stack</a>
-        <a href="#research">research</a>
+        <div class="nav-links">
+          <a href="#projects">projects</a>
+          <a href="#stack">stack</a>
+          <a href="#research">research</a>
+        </div>
+        <button
+          type="button"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle color theme"
+        ></button>
       </nav>
 
       <main id="main">

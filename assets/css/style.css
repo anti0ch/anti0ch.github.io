@@ -36,6 +36,38 @@
   }
 }
 
+/* Explicit theme choice from the toggle, overriding the OS preference. */
+
+:root[data-theme="dark"] {
+  --bg: #0b0c0e;
+  --bg-raised: #131518;
+  --border: #24262b;
+  --border-bright: #33363d;
+  --text: #e9e6df;
+  --text-dim: #a5a299;
+  --text-faint: #86847c;
+  --accent: #dd9a52;
+  --accent-dim: #c8904f;
+  --focus: #8fb8e8;
+  --bg-translucent: rgba(11, 12, 14, 0.94);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #faf8f4;
+  --bg-raised: #ffffff;
+  --border: #ddd7ca;
+  --border-bright: #c3bcac;
+  --text: #1c1a17;
+  --text-dim: #55524b;
+  --text-faint: #6b6760;
+  --accent: #9a5a12;
+  --accent-dim: #8a5410;
+  --focus: #1a5fb4;
+  --bg-translucent: rgba(250, 248, 244, 0.94);
+  color-scheme: light;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -174,9 +206,9 @@ a.ext::after {
   top: 0;
   z-index: 5;
   display: flex;
-  gap: 24px;
-  height: var(--nav-h);
+  justify-content: space-between;
   align-items: center;
+  height: var(--nav-h);
   margin-top: 20px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -194,6 +226,11 @@ a.ext::after {
   display: none;
 }
 
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
 .section-nav a {
   color: var(--text-faint);
   white-space: nowrap;
@@ -201,6 +238,24 @@ a.ext::after {
 }
 
 .section-nav a:hover {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
   color: var(--accent);
 }
 
