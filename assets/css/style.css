@@ -437,10 +437,8 @@ section.block:last-of-type {
   margin: 14px 0 0;
 }
 
-.project .cta {
+.cta {
   display: inline-block;
-  align-self: flex-start;
-  margin-top: 18px;
   padding: 8px 16px;
   border: 1px solid var(--accent-dim);
   color: var(--accent);
@@ -448,7 +446,12 @@ section.block:last-of-type {
   font-size: 0.85rem;
 }
 
-.project .cta:hover {
+.project .cta {
+  align-self: flex-start;
+  margin-top: 18px;
+}
+
+.cta:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bg);
@@ -560,6 +563,25 @@ section.block:last-of-type {
   color: var(--text-dim);
   font-size: 0.95rem;
   max-width: 62ch;
+}
+
+/* Closing */
+
+.closing {
+  text-align: center;
+}
+
+.closing-line {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin: 0 0 24px;
+}
+
+.closing-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 /* Lightbox */
