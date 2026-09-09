@@ -291,6 +291,28 @@ section.block:last-of-type {
   padding: 14px 18px;
 }
 
+.project-thumb.has-caption {
+  aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-thumb.has-caption img {
+  height: 200px;
+  flex: none;
+}
+
+.thumb-caption {
+  margin: 0;
+  padding: 8px 16px 12px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--text-faint);
+  text-align: center;
+}
+
 .project-thumb.split {
   aspect-ratio: 32 / 9;
   display: grid;
