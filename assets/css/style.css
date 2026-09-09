@@ -329,6 +329,50 @@ section.block:last-of-type {
   padding-top: 16px;
 }
 
+/* Featured project */
+
+.project .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.project .outcome {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 4px 0 16px;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+}
+
+.project .role {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  margin: 14px 0 0;
+}
+
+.project .cta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 18px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.project .cta:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
 /* Stack */
 
 .stack {
