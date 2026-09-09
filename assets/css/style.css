@@ -78,6 +78,14 @@ a:hover {
   border-bottom-color: currentColor;
 }
 
+a.ext::after {
+  content: "\2197";
+  display: inline-block;
+  margin-left: 0.15em;
+  font-size: 0.85em;
+  opacity: 0.6;
+}
+
 :focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 3px;
